@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Square from '../Square';
-import '../Square/styles.css';
 
 export default class Forms extends Component {
     constructor(props) {
@@ -47,7 +45,6 @@ export default class Forms extends Component {
                     </label>
                     <input type="submit"/>
                 </form>
-                <Square />
             </div>
         )
     }

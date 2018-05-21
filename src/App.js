@@ -45,7 +45,8 @@ class App extends Component {
         handleCoordenateX={this.handleCoordenateX} 
         handleCoordenateY={this.handleCoordenateY} 
         handleLengthZ={this.handleLengthZ} 
-        handleSubmit={this.handleSubmit}/>
+        handleSubmit={this.handleSubmit}/> 
+        <Square coordenateX={this.state.coordenateX} coordenateY={this.state.coordenateY} lengthZ={this.state.lengthZ}/>
       </div>
     );
   }
