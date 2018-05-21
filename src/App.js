@@ -1,18 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Forms from './components/Forms';
+import Square from './components/Square';
+import './components/Square/styles.css'
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      coordenateX: 0,
+      coordenateY: 0,
+      lengthZ: 0
+    };
+
+    this.handleCoordenateX = this.handleCoordenateX.bind(this);
+    this.handleCoordenateY = this.handleCoordenateY.bind(this);
+    this.handleLengthZ = this.handleLengthZ.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  
+  handleSubmit(hola) {
+    this.setState({coordenateX: hola});
+  }
+
+  handleCoordenateX(x) {
+    this.setState({coordenateX: x});
+  }
+
+  handleCoordenateY(y) {
+    this.setState({coordenateY: y});
+  }
+
+  handleLengthZ(z) {
+    this.setState({lengthZ: z})
+  }
+
+  // handleSubmit={this.handleSubmit}
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Forms 
+        handleCoordenateX={this.handleCoordenateX} 
+        handleCoordenateY={this.handleCoordenateY} 
+        handleLengthZ={this.handleLengthZ} 
+        handleSubmit={this.handleSubmit}/>
       </div>
     );
   }
