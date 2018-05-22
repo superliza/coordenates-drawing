@@ -16,12 +16,6 @@ class App extends Component {
     this.handleCoordenateX = this.handleCoordenateX.bind(this);
     this.handleCoordenateY = this.handleCoordenateY.bind(this);
     this.handleLengthZ = this.handleLengthZ.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  
-  handleSubmit(hola) {
-    this.setState({coordenateX: hola});
   }
 
   handleCoordenateX(x) {
@@ -36,16 +30,13 @@ class App extends Component {
     this.setState({lengthZ: z})
   }
 
-  // handleSubmit={this.handleSubmit}
-
   render() {
     return (
       <div className="App">
         <Forms 
         handleCoordenateX={this.handleCoordenateX} 
         handleCoordenateY={this.handleCoordenateY} 
-        handleLengthZ={this.handleLengthZ} 
-        handleSubmit={this.handleSubmit}/> 
+        handleLengthZ={this.handleLengthZ}/> 
         <Square coordenateX={this.state.coordenateX} coordenateY={this.state.coordenateY} lengthZ={this.state.lengthZ}/>
       </div>
     );

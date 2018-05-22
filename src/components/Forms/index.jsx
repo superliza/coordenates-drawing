@@ -7,13 +7,6 @@ export default class Forms extends Component {
         this.handleX = this.handleX.bind(this);
         this.handleY = this.handleY.bind(this);
         this.handleZ = this.handleZ.bind(this);
-        this.handleSub = this.handleSub.bind(this);
-    }
-
-    handleSub(event) {
-        event.preventDefault();
-        this.props.handleSubmit(console.log("hola"));
-        
     }
 
     handleX(event) {
@@ -30,10 +23,9 @@ export default class Forms extends Component {
 
 
     render() {
-        // onSubmit={this.handleSub}
         return(
             <div>
-                <form onSubmit={this.handleSub}>
+                <form>
                     <label>Coordenate x
                         <input type="number" value={this.props.coordenateX} onKeyUp={this.handleX}/>
                     </label>
